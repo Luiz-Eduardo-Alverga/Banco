@@ -30,10 +30,20 @@ export class CreateFirstTable1695260803478 implements MigrationInterface {
                     type: 'varchar',
                     length: '100',
                     isNullable: false
-                }
-            ]
+                },
+                {
+                    name: 'created_at',
+                    type: 'timestamp',
+                    default: 'now()'
+                },
+                {
+                    name: 'updated_at',
+                    type: 'timestamp',
+                    default: 'now()'
+                },
+              ],
         })
-     )   
+     )
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
